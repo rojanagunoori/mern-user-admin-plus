@@ -1,0 +1,198 @@
+body {
+    background-image: url('https://www.slidebackground.com/uploads/formal-background/presentations-pink-formal-wallpaper-download--22.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.img_parent img {
+    width: 35px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img_parent img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action {
+    background: none !important;
+    border: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown_btn {
+    background: none !important;
+    border: none;
+    color: #8F469B !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s;
+}
+
+.dropdown_btn:hover {
+    background-color: #D1B3DA !important;
+    color: #5E2E73 !important;
+}
+
+.dropdown_btn:active {
+    transform: scale(0.95);
+}
+
+.dots {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.dots:hover {
+    color: #8F469B;
+}
+
+/* Fade-in and slide-up animation for table rows */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tbody tr {
+    animation: fadeInUp 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+/* Smooth transition for dropdown menu with slide-in effect */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-color: rgba(143, 70, 155, 0.9);
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Badge styling */
+.badge-primary {
+    background: linear-gradient(45deg, #8F469B, #5E2E73);
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.badge-danger {
+    background: linear-gradient(45deg, #E74C3C, #C0392B);
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.badge-primary:hover, .badge-danger:hover {
+    filter: brightness(1.2);
+}
+
+/* Card shadow and padding */
+.card {
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Table header design */
+.table-dark th {
+    background: linear-gradient(45deg, #8F469B, #5E2E73);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Add glow effect to table headers */
+.table-dark th {
+    position: relative;
+}
+
+.table-dark th::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.table-dark th:hover::after {
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Additional styling for dropdown menu items */
+.dropdown-item {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #D1B3DA;
+    color: #5E2E73;
+}
+/* Badge styling */
+.badge-primary {
+    background: linear-gradient(45deg, #8F469B, #5E2E73) !important;
+    color: white !important;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-danger {
+    background: linear-gradient(45deg, #E74C3C, #C0392B) !important;
+    color: white !important;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-primary:hover, .badge-danger:hover {
+    filter: brightness(1.2);
+}

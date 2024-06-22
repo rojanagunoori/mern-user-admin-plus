@@ -1,0 +1,50 @@
+/* home.css */
+
+.export_btn,
+.search_btn {
+    background: linear-gradient(to left, #485296 50%, #602B80 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-position 0.4s ease;
+}
+
+.export_btn:hover,
+.search_btn:hover {
+    background-position: left;
+    color: #fff;
+}
+
+.dropdown_btn {
+    background: none !important;
+    border: none;
+    color: blue;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.dropdown_btn:hover {
+    color: #0d6efd !important;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+.search {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
