@@ -160,7 +160,7 @@ const Edit = () => {
               <Row>
 
                 <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                  <Form.Label>First Name</Form.Label>
+                  <Form.Label style={{ color: 'blue' }}>First Name</Form.Label>
                   <Form.Control type="text" name='fname' value={inputdata.fname} onChange={setInputValue} placeholder="Enter First Name" />
                 </Form.Group>
                 <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
@@ -178,6 +178,7 @@ const Edit = () => {
                 <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
                   <Form.Label>Select Your Gender</Form.Label>
                   <Form.Check
+                  style={{ color: "#000" }}
                     type={"radio"}
                     name='gender'
                     label={"Male"}
@@ -186,6 +187,7 @@ const Edit = () => {
                     checked={inputdata.gender==="Male"?true:false}
                   />
                   <Form.Check
+              style={{ color: "#000" }}
                     type={"radio"}
                     name='gender'
                     label={"Female"}

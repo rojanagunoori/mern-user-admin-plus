@@ -176,7 +176,7 @@ if(image){
         <Form.Control type="text" onChange={setInputValue}  name='mobile'  value={inputdata.mobile}  placeholder="Enter Mobile Number" />
       </Form.Group>
       <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-        <Form.Label>Select Your Gender</Form.Label>
+        <Form.Label  > Your Gender</Form.Label>
         <Form.Check 
             type={"radio"}
             name='gender'
