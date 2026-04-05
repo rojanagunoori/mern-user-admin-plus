@@ -1,243 +1,317 @@
 # MERN User Admin Plus
 
-## 📌 Project Overview
+<video src="https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user_admin_plus.mp4" controls style="max-width: 100%;"></video>
 
-MERN User Admin Plus is a full-stack **User Management Admin Dashboard** built using the **MERN stack**.  
-The application allows administrators to manage users efficiently with complete **CRUD operations**, **profile image upload**, **status management**, **searching**, **filtering**, **pagination**, and **CSV export**.
+![Screenshot 1](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus1.png)
+![Screenshot 2](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus2.png)
+![Screenshot 3](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus3.png)
 
-The project follows a **client–server architecture**:
-- **Frontend (React)** handles UI, routing, and user interactions
-- **Backend (Node + Express)** exposes REST APIs and business logic
-- **MongoDB** stores user data
-- Application is deployed using modern cloud platforms
+A full-stack MERN application for managing users efficiently with CRUD operations, profile upload, search/filter, pagination, and CSV export.
 
----
+## 1. Important Links
 
-## 🌐 Live Application Links
+**Frontend Live Demo:** https://mern-useradmin-plus.netlify.app/
 
-- **Frontend (Netlify):**  
-  https://mern-useradmin-plus.netlify.app
+**Frontend Repo:** [GitHub Frontend](https://github.com/rojanagunoori/mern-user-admin-plus)
 
-- **Backend API (Render):**  
-  https://mern-user-admin-plus-backend.onrender.com
+**Backend Repo:** https://github.com/rojanagunoori/mern-user-admin-plus-backend
 
----
+**Backend API Base URL:** https://mern-user-admin-plus-backend.onrender.com
 
-## 🧱 Tech Stack Used
+## 2. Project Overview
 
-### Frontend Technologies
+MERN User Admin Plus is a full-featured user management application built with the MERN stack (MongoDB, Express, React, Node.js). It is designed for admins to efficiently manage user data in a structured way.
 
-| Technology | Usage |
-|---------|------|
-| React.js | UI development |
-| React Router DOM | Client-side routing |
-| Context API | Global state management |
-| Axios | API communication |
-| React Bootstrap | Responsive UI components |
-| React Toastify | Notifications |
-| Moment.js | Date formatting |
-| CSS3 | Styling & animations |
+### Key functionalities:
+
+Add Users: Admins can add users with profile images.
+
+- **Edit & Delete Users:** Update user information or remove users from the system.
+- **View User Details:** Access detailed information about a specific user.
+- **Search & Filter:** Filter users by name, gender, or status.
+  Pagination: Navigate through large datasets easily.
+- **Export Users:** Export all users as a CSV file for reporting or backup.
+- **Responsive UI:** Works on desktops, tablets, and mobile devices.
+
+**Purpose:** Streamline user management with a simple, scalable, and maintainable full-stack solution.
 
 ---
 
-### Backend Technologies
+## 3. 🚀 Features
 
-| Technology | Usage |
-|---------|------|
-| Node.js | Runtime environment |
-| Express.js | REST API framework |
-| MongoDB | Database |
-| Mongoose | ODM for MongoDB |
-| Multer | Image upload handling |
-| CSV Writer | Export users to CSV |
-| dotenv | Environment variables |
-| CORS | Cross-origin requests |
-
----
-
-## 🏗 Application Architecture
-
-React Frontend
-|
-| Axios API Calls
-|
-Express Backend
-|
-MongoDB Database
-
-yaml
-Copy code
-
-- Frontend communicates with backend via REST APIs
-- Backend performs CRUD operations
-- MongoDB stores user records
-- Images are stored on backend server
+- **Add Users with Profile Images –** Upload avatars for new users.
+- **Edit & Delete Users –** Modify existing user information or remove users entirely.
+- **Search & Filter Users –** Quickly locate users by name, gender, or status.
+- **Pagination –** Automatically splits users into pages for easier navigation.
+- **Export Users to CSV –** Download all user data in CSV format for offline use.
+- **Detailed Profile View –** Click on a user to see complete information including profile image, location, status, and timestamps.
+- **Responsive UI –** Works perfectly across desktops, tablets, and mobile devices.
+- **Toast Notifications –** Success and error messages for all user actions.
+- **Lazy Loading –** Only load components when needed to improve performance.
 
 ---
 
-## ⚙️ Frontend Setup (Local)
-
-### 1️⃣ Clone Frontend Repository
+## 4. Folder / Project Structure
 
 ```bash
-git clone https://github.com/rojanagunoori/mern-user-admin-plus.git
-cd mern-user-admin-plus
+Frontend (client)
+client/
+├─ src/
+│  ├─ components/
+│  │  ├─ context/          # Global state for add/update/delete
+│  │  ├─ Headers/          # Navbar
+│  │  ├─ Pagination/       # Pagination component
+│  │  └─ Spiner/           # Loading spinner
+│  ├─ pages/
+│  │  ├─ Home/             # Home page
+│  │  ├─ Register/         # User registration form
+│  │  ├─ Edit/             # Edit user page
+│  │  └─ Profile/          # User profile page
+│  ├─ services/
+│  │  ├─ apiCall.js        # Axios requests
+│  │  ├─ Apis.js           # API functions
+│  │  └─ helper.js         # Constants
+│  ├─ App.js
+│  ├─ App.css
+│  └─ index.js
 ```
-### 2️⃣ Install Dependencies
-```bash
-npm install
-```
-### 3️⃣ Configure Environment Variables
-Create a .env file in the frontend root directory:
+
+Backend (backend)
 
 ```bash
-REACT_APP_BASE_URL=https://mern-user-admin-plus-backend.onrender.com
+backend/
+├─ Controllers/           # User controller logic (CRUD, export)
+├─ Routes/                # API routes
+├─ models/                # Mongoose schemas
+├─ multerconfig/          # File upload configuration
+├─ public/files/          # Exported CSV files
+├─ db/                    # Database connection
+├─ app.js                 # Express server
+├─ package.json
+└─ .env                   # Environment variables
 ```
 
-For local backend:
+## 5. Tech Stack / Environment
 
-```bash
-REACT_APP_BASE_URL=http://localhost:6010
-```
+**Frontend:**
 
-### 4️⃣ Start Frontend Application
-```bash
-npm start
-```
-Frontend runs on:
+- **React.js –** Frontend framework for building dynamic user interfaces.
+- **React Router DOM –** Routing between pages.
+- **React Bootstrap –** Prebuilt responsive components.
+- **React Select –** Dropdown select components.
+- **React Toastify –** Notifications and alerts.
+- **Axios –** HTTP requests to the backend API.
 
-```bash
-http://localhost:3000
-```
+**Backend:**
 
-## ⚙️ Backend Setup (Local)
-### 1️⃣ Clone Backend Repository
+- **Node.js + Express –** Server-side framework.
+- **MongoDB + Mongoose –** Database and ODM for user data.
+- **Multer –** File uploads for profile images.
+- **Moment.js –** Timestamp formatting for created/updated dates.
+- **Fast-CSV –** CSV export functionality.
+- **CORS –** Cross-Origin requests handling.
+
+## 6. Installation / Setup
+
+### Backend Setup
+
+#### Clone backend
+
 ```bash
 git clone https://github.com/rojanagunoori/mern-user-admin-plus-backend.git
 cd mern-user-admin-plus-backend
 ```
-### 2️⃣ Install Dependencies
+
+#### Install dependencies
+
 ```bash
 npm install
 ```
-### 3️⃣ Configure Environment Variables
-Create a .env file in backend root directory:
+
+#### Create .env file
 
 ```bash
 PORT=6010
 MONGO_URL=your_mongodb_connection_string
+BASE_URL=http://localhost:6010
 ```
 
-### 4️⃣ Start Backend Server
+# Start backend server
+
+```bash
+node server.js
+```
+
+**Server URL:** http://localhost:6010
+
+## Frontend Setup
+
+### Clone frontend
+
+```bash
+git clone https://github.com/rojanagunoori/mern-user-admin-plus.git
+cd mern-user-admin-plus/client
+```
+
+#### Install dependencies
+
+```bash
+npm install
+```
+
+#### Start frontend
+
 ```bash
 npm start
 ```
-Backend runs on:
+
+**Frontend URL:** http://localhost:3000
+
+Make sure the backend server is running first.
+
+---
+
+## 7. Environment Variables
+
+### Backend (.env)
 
 ```bash
-http://localhost:6010
+PORT=6010
+MONGO_URL=<your_mongodb_connection_string>
+BASE_URL=http://localhost:6010
 ```
-## 🔗 API Integration (Frontend ↔ Backend)
-* Axios is used for HTTP requests
 
-* All API calls are centralized in services/Apis.js
+### Frontend (.env) (optional)
 
-* Base URL is managed in services/helper.js
+```bash
+REACT_APP_API_URL=http://localhost:6010
+```
 
-* Backend provides REST endpoints for:
+---
 
-*User registration
+## 8. API Usage
 
-* Fetch users
+### Register User
 
-* Edit user
+```bash
+import { registerfunc } from './Apis';
 
-* Delete user
+const formData = new FormData();
+formData.append("fname", "John");
+formData.append("lname", "Doe");
+formData.append("email", "john@example.com");
+formData.append("mobile", "1234567890");
+formData.append("gender", "Male");
+formData.append("status", "Active");
+formData.append("location", "New York");
+formData.append("user_profile", file);
 
-* Status update
+const response = await registerfunc(formData, {
+  headers: { "Content-Type": "multipart/form-data" }
+});
+```
 
-* CSV export
+### Get Users with Filters & Pagination
 
-## 🚀 Application Features (Detailed)
-### ✅ User Listing
-* Displays all users in a table
+```bash
+import { usergetfunc } from './Apis';
+const response = await usergetfunc("john", "Male", "Active", "New", 1);
+console.log(response.data.usersData);
+```
 
-* Shows profile image, name, email, gender, and status
+### Other Endpoints
 
-### ✅ Add New User
-* Create users with profile image upload
+```bash
+| Endpoint           | Method | Description             |
+| ------------------ | ------ | ----------------------- |
+| `/user/:id`        | GET    | Get single user by ID   |
+| `/user/edit/:id`   | PUT    | Edit user               |
+| `/user/delete/:id` | DELETE | Delete user             |
+| `/user/status/:id` | PUT    | Change status           |
+| `/userexport`      | GET    | Export all users to CSV |
+```
 
-* Image preview before submission
+---
 
-* Uses FormData
+## 9. Key Components
 
-### ✅ Edit User
-* Pre-filled edit form
+- **ContextProvider –** Manages global state for adding, updating, and deleting users.
+- **Headers –** Navbar component with navigation links and branding.
+- **Register –** Form component to add new users with input validation and profile upload.
+- **Edit –** Form for editing existing user information.
+- **Profile –** Displays detailed information about a single user.
+- **Pagination –** Component to navigate through multiple pages of users.
+- **Spiner –** Loading indicator for async operations.
 
-* Update details and profile image
+  ***
 
-### ✅ View User Profile
-* Displays complete user information
+## 10. Security
 
-* Uses Moment.js for date formatting
+- **Validation:** Frontend and backend validation ensures correct inputs.
+- **File Upload Restrictions:** Only allows .png, .jpg, and .jpeg file types.
+- **Environment Variables:** MongoDB credentials and server configuration are stored in .env files.
+- **Error Handling:** Backend returns status codes and messages, frontend displays toast notifications.
+- **Duplicate Prevention:** Ensures unique emails and prevents duplicate mobile numbers.
 
-### ✅ Delete User
-* Permanently removes user
+---
 
-* Confirmation via UI feedback
+## 11. Challenges Faced
 
-### ✅ Search Users
-* Search by name or email
+- **File Upload Handling:** Managing multer storage, naming, and validation for profile images.
+- **Search & Filter Logic:** Implementing server-side filters for name, gender, and status efficiently.
+- **Pagination:** Calculating page count and skipping correct number of records per page.
+- **Responsive UI:** Ensuring that the frontend works seamlessly on all screen sizes.
+- **Global State Management:** Managing user state updates globally using React context.
+- **Data Validation:** Ensuring unique emails and mobile numbers across the database.
 
-* Backend-driven filtering
+  ***
 
-### ✅ Filter & Sort
-* Filter by gender and status
+## 12. Future Improvements
 
-* Sort by newest/oldest users
+- **JWT Authentication:** Secure admin access and protect API routes.
+- **Role-Based Permissions:** Assign different levels of access for users/admins.
+- **Analytics Dashboard:** Display statistics and charts for user data.
+- **Dark Mode:** Toggle between light and dark UI themes.
+- **Infinite Scroll:** Replace pagination with smooth infinite scrolling for large datasets.
+- **Unit & Integration Tests:** Automated tests for frontend and backend functionality.
+  ***
 
-### ✅ Pagination
-* Backend-controlled pagination
+## 13. Contributing
 
-* Improves performance
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit changes (`git commit -m 'Add feature`')
+4. Push to your branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
-### ✅ Status Management
-* Toggle Active / InActive
+---
 
-* Real-time UI update
+## 14. Acknowledgments
 
-### ✅ Export to CSV
-* Download all users as CSV file
+- **React**
+- **Node.js**
+- **MongoDB**
+- **React Bootstrap**
+- **React Toastify**
+- **Inspiration: Full-stack MERN tutorials**
 
-* Server-side CSV generation
+---
 
-## 🔄 Global State Management
-*  Context API is used for:
+## 15. License
 
-*  Add user success message
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-*  Update user success message
+---
 
-*  Delete user success message
+## 🙋‍♀️ Author / Contact
 
-*  Avoids unnecessary re-renders
+**Nagunoori Roja**
 
-## 🌍 Deployment
-* Component	Platform
-* Frontend	Netlify
-Backend	Render
-Database	MongoDB Atlas
+- 📧 Email: [nagunooriroja@gmail.com](mailto:nagunooriroja@gmail.com)
+- 🌐 GitHub: [https://github.com/rojanagunoori](https://github.com/rojanagunoori)
+- 🌐 LinkedIn: [https://www.linkedin.com/in/nagunoori-roja-51b936267/](https://www.linkedin.com/in/nagunoori-roja-51b936267/)
+- 🌐 Personal Portfolio: [portfolio-roja.netlify.app](https://portfolio-roja.netlify.app/)
+- 🌐 LeetCode: [https://leetcode.com/u/dSdsi6XkI8/](https://leetcode.com/u/dSdsi6XkI8/)
+- 🌐 Kaggle: [https://www.kaggle.com/nagunooriroja](https://www.kaggle.com/nagunooriroja)
 
-## 🔐 Environment & Security
-.env files are ignored using .gitignore
-
-Sensitive credentials are not committed
-
-Separate configs for development & production
-
-## 👨‍💻 Author
-Roja nagunoori
-GitHub: https://github.com/rojanagunoori
-
-## 📜 License
-MIT License
+---
