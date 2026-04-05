@@ -1,6 +1,6 @@
 # MERN User Admin Plus
 
-<video src="https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user_admin_plus.mp4" controls style="max-width: 100%;"></video>
+<video src="https://github.com/rojanagunoori/mern-user-admin-plus/blob/main/client/public/user_admin_plus.mp4" controls style="max-width: 100%;"></video>
 
 ![Screenshot 1](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus1.png)
 ![Screenshot 2](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus2.png)
