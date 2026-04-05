@@ -1,11 +1,10 @@
 # MERN User Admin Plus
 
-<video src="/mern-user-admin-plus/client/public/user_admin_plus.mp4" controls="controls" style="max-width: 100%;">
-</video>
+<video src="https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user_admin_plus.mp4" controls style="max-width: 100%;"></video>
 
-![Screenshot 1](/mern-user-admin-plus/client/public/user-admin-plus1.png)
-![Screenshot 2](/mern-user-admin-plus/client/public/user-admin-plus2.png)
-![Screenshot 3](/mern-user-admin-plus/client/public/user-admin-plus3.png)
+![Screenshot 1](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus1.png)
+![Screenshot 2](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus2.png)
+![Screenshot 3](https://raw.githubusercontent.com/rojanagunoori/mern-user-admin-plus/main/client/public/user-admin-plus3.png)
 
 A full-stack MERN application for managing users efficiently with CRUD operations, profile upload, search/filter, pagination, and CSV export.
 
