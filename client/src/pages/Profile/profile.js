@@ -35,7 +35,10 @@ const Profile = () => {
         <Spiner />
       ) : (
         <div className="container">
-          <Card className="card-profile shadow col-lg-6 mx-auto mt-5 text-blue">
+          <Card
+            className="card-profile shadow col-lg-6 mx-auto mt-5 text-blue"
+            style={{ color: "blue" }}
+          >
             <Card.Body>
               <Row>
                 <div className="card-profile-status d-flex justify-content-center">
